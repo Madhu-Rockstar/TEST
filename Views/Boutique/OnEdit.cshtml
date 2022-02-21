@@ -1,0 +1,40 @@
+﻿@model Test.Models.BoutiqueShop
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OnEdit</title>
+</head>
+<body>
+    <div>
+        <h1>Shop Details @Model.Bname</h1>
+        @using (Html.BeginForm())
+        {
+            <p>
+                @Html.LabelFor((m) => m.Bid)
+                @Html.DisplayFor((m) => m.Bid)
+                @Html.HiddenFor((m) => m.Bid)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.Bname)
+                @Html.TextBoxFor((m) => m.Bname)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.Bprice)
+                @Html.TextBoxFor((m) => m.Bprice)
+            </p>
+            <p>
+                @Html.LabelFor((m) => m.Bcolor)
+                @Html.TextBoxFor((m) => m.Bcolor)
+            </p>
+
+            <button>Save changes</button>
+        </div>
+</body>
+</html>
